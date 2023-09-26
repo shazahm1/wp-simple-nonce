@@ -80,8 +80,8 @@ Class WPSimpleNonce {
 			return false;
 		}
 
-		add_option(self::option_root.'_'.$name,$nonce);
-		add_option(self::option_root.'_expires_'.$name,time()+86400);
+		add_option( self::option_root .' _' . $name, $nonce, '', false ); // Set autoload to `false`.
+		add_option( self::option_root.'_expires_' . $name, time()+86400, '', false ); // Set autoload to `false`.
 		return true;
 	}
 
